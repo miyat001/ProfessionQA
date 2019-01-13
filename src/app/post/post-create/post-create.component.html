@@ -1,0 +1,19 @@
+  <mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+      <mat-form-field>
+        <input matInput type="text" name="title" ngModel require placeholder="Title">
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput type="text" name="content" ngModel require placeholder="Content"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select name="category" ngModel placeholder="Category">
+          <mat-option value="php">PHP</mat-option>
+          <mat-option value="javascript">JavaScript</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button type="submit">Save Post</button>
+    </form>
+  </mat-card>

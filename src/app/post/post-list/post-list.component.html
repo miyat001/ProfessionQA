@@ -1,0 +1,11 @@
+<mat-card *ngFor="let post of posts">
+  <mat-card-title>
+    <p>{{ post.title }}</p>
+  </mat-card-title>
+  <mat-card-subtitle>
+    <p>{{ post.category }}</p>
+  </mat-card-subtitle>
+  <mat-card-actions>
+    <button mat-raised-button (click)="openDialog(post)">Comment</button>
+  </mat-card-actions>
+</mat-card>
